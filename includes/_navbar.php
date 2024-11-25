@@ -1,9 +1,11 @@
+
+        <!-- Boutons de connexion et d'inscription à gauche -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
         <!-- Boutons de connexion et d'inscription à gauche -->
         <div class="d-flex align-items-center mx-4">
-            <button id="login-btn" class="btn btn-link">Connexion</button>
-            <button id="register-btn" class="btn btn-link">Inscription</button>
+            <a href="connexion.php" class="btn btn-link">Connexion</a>
+            <a href="register.php" class="btn btn-link">Inscription</a>
             <div id="user-info" class="d-none flex-column align-items-center ms-3">
                 <span id="username">Nom d'utilisateur</span>
                 <a href="AccountManagement.php" class="text-decoration-none text-dark d-flex flex-column align-items-center">
