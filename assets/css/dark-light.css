@@ -1,0 +1,75 @@
+/* Mode clair */
+body.light-mode {
+  background-color: #fff !important; /* Fond blanc pour tout le body */
+  color: #000 !important; /* Texte noir pour tout le body */
+}
+
+body.light-mode .navbar {
+  background-color: #f8f9fa !important; /* Couleur claire pour la navbar */
+  color: #000 !important; /* Texte noir */
+}
+
+body.light-mode .footer {
+  background-color: #f1f1f1 !important; /* Couleur claire pour le footer */
+  color: #000 !important; /* Texte noir */
+}
+
+/* Mode clair pour le side menu */
+body.light-mode .side-menu {
+  background-color: #f8f9fa; /* Couleur de fond claire */
+  color: #000; /* Texte noir */
+}
+
+body.light-mode .side-menu .side-menu-item {
+  color: #000; /* Texte noir pour chaque item */
+}
+
+/* Mode sombre */
+body.dark-mode {
+  background-color: #000 !important; /* Fond noir pour tout le body */
+  color: #fff !important; /* Texte blanc pour tout le body */
+}
+
+body.dark-mode .navbar {
+  background-color: #222 !important; /* Couleur sombre pour la navbar */
+  color: #fff !important; /* Texte blanc */
+}
+
+body.dark-mode .footer {
+  background-color: #111 !important; /* Couleur sombre pour le footer */
+  color: #fff !important; /* Texte blanc */
+}
+
+/* Couleur des liens et icônes en mode sombre */
+body.dark-mode a,
+body.dark-mode .btn-link,
+body.dark-mode .fab, /* Pour les icônes de réseaux sociaux */
+body.dark-mode .fas {
+  /* Pour d'autres icônes font-awesome si utilisées */
+  color: #fff !important; /* Texte et icônes en blanc */
+}
+
+/* Transition douce pour les changements de couleur */
+body.dark-mode a,
+body.dark-mode .btn-link,
+body.dark-mode .fab,
+body.dark-mode .fas {
+  transition: color 0.3s ease;
+}
+
+/* Mode sombre pour le side menu */
+body.dark-mode .side-menu {
+  background-color: #222; /* Couleur de fond sombre */
+  color: #fff; /* Texte blanc */
+}
+
+body.dark-mode .side-menu .side-menu-item {
+  color: #fff !important; /* Texte blanc pour chaque item */
+}
+
+/* Liens et icônes dans .side-menu en mode sombre */
+body.dark-mode .side-menu a,
+body.dark-mode .side-menu .fab,
+body.dark-mode .side-menu .fas {
+  color: #fff !important; /* Blanc pour les liens et icônes dans le menu */
+}

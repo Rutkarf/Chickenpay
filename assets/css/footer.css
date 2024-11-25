@@ -1,0 +1,63 @@
+.footer {
+  border-top: 1px solid #ddd;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+.footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0; /* Supprime le padding du container */
+  margin-left: 0 !important; /* Supprime la marge gauche par défaut */
+  margin-right: 0 !important; /* Supprime la marge droite par défaut */
+  max-width: 100% !important; /* Évite la limite de largeur par défaut de Bootstrap */
+  width: 100%; /* Assure que le container prend toute la largeur */
+}
+
+.footer .row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  flex-wrap: nowrap; /* Empêche les éléments de passer sur plusieurs lignes */
+}
+
+.footer .col-md-3,
+.footer .col-md-2 {
+  flex-grow: 1; /* Permet aux colonnes de s'étendre pour occuper tout l’espace */
+  min-width: 0; /* Empêche les éléments de déborder */
+}
+
+.footer .input-group {
+  max-width: 300px;
+  width: 100%; /* L'input prend toute la largeur de sa colonne */
+}
+
+.footer .text-center {
+  text-align: center;
+}
+
+.footer .text-end {
+  text-align: end;
+}
+
+.footer .fab,
+.footer .fas {
+  font-size: 1.5rem;
+}
+
+.footer a {
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: #007bff !important;
+}
+
+.footer .list-unstyled {
+  font-size: 0.75rem;
+  margin: 0;
+  padding: 0;
+}

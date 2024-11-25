@@ -1,0 +1,9 @@
+#three-canvas {
+    width: 25vw; /* Définissez la largeur du canvas à 25% de la largeur de la page */
+    height: 25vh; /* Définissez la hauteur du canvas à 25% de la hauteur de la page */
+    position: absolute; /* Définissez la position du canvas en absolu */
+    top: 10vh; /* Définissez la position verticale du canvas pour éviter de chevaucher la navbar */
+    left: 10vw; /* Définissez la position horizontale du canvas pour éviter de chevaucher le sidemenu */
+    z-index: -10; /* Définissez l'indice de pile pour éviter de chevaucher les autres éléments */
+    border: 1px solid rgb(187, 15, 15); /* Ajoutez une bordure pour délimiter le canvas */
+  }

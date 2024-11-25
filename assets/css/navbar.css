@@ -1,0 +1,25 @@
+.navbar {
+  padding: 0.5rem 1rem;
+}
+
+.navbar .container-fluid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .d-flex {
+  display: flex;
+}
+
+.navbar .d-flex > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 10px;
+}
+
+.navbar i {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
