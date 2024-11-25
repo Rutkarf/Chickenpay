@@ -1,8 +1,25 @@
+<!-- C:\laragon\www\Chickenpay\connexion.php -->
+
+
 <?php include 'includes/_head.php'; ?>
 
 <?php include 'includes/_navbar.php'; ?>
 
+<?php
+require_once 'Database.php'; ?>
 
+
+
+<?php
+// Obtenir la connexion
+$db = Database::getInstance()->getConnection();
+
+// Utiliser la connexion
+$stmt = $db->prepare("SELECT * FROM users");
+$stmt->execute();
+$users = $stmt->fetchAll();
+
+?>
 
 <div class="container mt-5">
     <h2 class="text-center mb-4">Connexion</h2>

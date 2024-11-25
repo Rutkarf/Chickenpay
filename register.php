@@ -1,7 +1,23 @@
+<!-- C:\laragon\www\Chickenpay\register.php -->
+
+
+
 <?php include 'includes/_head.php'; ?>
 
 <?php include 'includes/_navbar.php'; ?>
 
+
+<?php 
+require_once 'Database.php'; // Adjust path if necessary
+
+// Obtenir la connexion
+$db = Database::getInstance()->getConnection();
+
+// Utiliser la connexion
+$stmt = $db->prepare("SELECT * FROM users");
+$stmt->execute();
+$users = $stmt->fetchAll();
+?>
 
 <div class="container mt-3 mb-3">
     <h2 class="text-center mb-2">Inscription</h2>
