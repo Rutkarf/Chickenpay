@@ -1,5 +1,6 @@
+<?php
+?>
 
-        <!-- Boutons de connexion et d'inscription à gauche -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
         <!-- Boutons de connexion et d'inscription à gauche -->

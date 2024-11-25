@@ -1,8 +1,12 @@
-<?php include 'includes/_head.php'; ?>
-<?php include 'includes/_navbar.php'; ?>
+<!-- C:\laragon\www\Chickenpay\connexion.php -->
 
-<?php
-require_once 'Database.php';
+<?php 
+session_start(); // Start the session at the beginning
+
+include 'includes/_head.php'; 
+include 'includes/_navbar.php'; 
+
+require_once 'Database.php'; // Ensure this path is correct
 
 // Initialize message variable
 $message = '';
@@ -16,22 +20,21 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $usernameOrEmail = $_POST['usernameOrEmail'];
     $password = $_POST['password'];
 
-    // Prepare SQL query to find user by email
-    $stmt = $db->prepare("SELECT * FROM users WHERE email = ?");
-    $stmt->execute([$usernameOrEmail]);
+    // Prepare SQL query to find user by email or full name
+    $stmt = $db->prepare("SELECT * FROM users WHERE email = ? OR full_name = ?");
+    $stmt->execute([$usernameOrEmail, $usernameOrEmail]);
     $user = $stmt->fetch();
 
     // Check if user exists and password is correct
     if ($user && password_verify($password, $user['password'])) {
         // Successful login
-        session_start();
         $_SESSION['user_id'] = $user['id'];
         $_SESSION['full_name'] = $user['full_name'];
-        header("Location: dashboard.php"); // Redirect to dashboard
+        header("Location: login.php"); // Redirect to dashboard
         exit();
     } else {
         // Login failed
-        $message = "Email or password is incorrect.";
+        $message = "Nom d'utilisateur ou mot de passe incorrect.";
     }
 }
 ?>
@@ -39,13 +42,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <div class="container mt-5">
     <h2 class="text-center mb-4">Connexion</h2>
     <?php if ($message): ?>
-        <div class="alert alert-danger"><?php echo $message; ?></div>
+        <div class="alert alert-danger text-center"><?php echo htmlspecialchars($message); ?></div>
     <?php endif; ?>
     <div class="card p-4 mx-auto bg-transparent border-0 col-12 col-md-8 col-lg-6">
         <form method="post" action="">
             <div class="mb-3">
-                <label for="usernameOrEmail" class="form-label">Email</label>
-                <input type="text" class="form-control" id="usernameOrEmail" name="usernameOrEmail" placeholder="Entrez votre adresse e-mail" required>
+                <label for="usernameOrEmail" class="form-label">@Mail ou Nom d'utilisateur</label>
+                <input type="text" class="form-control" id="usernameOrEmail" name="usernameOrEmail" placeholder="@Mail ou Nom d'utilisateur" required>
             </div>
             <div class="mb-3">
                 <label for="password" class="form-label">Mot de passe</label>
@@ -70,3 +73,4 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 </div>
 
 <?php include 'includes/_footer.php'; ?>
+

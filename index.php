@@ -1,9 +1,8 @@
-<!-- C:\laragon\www\Chickenpay\index.php -->
-
-<?php
-// Démarrez la session si nécessaire
-session_start();
+<?php 
+session_start(); // Start the session at the beginning
 ?>
+
+<!-- C:\laragon\www\Chickenpay\index.php -->
 
 <?php include 'includes/_head.php'; ?>
 
